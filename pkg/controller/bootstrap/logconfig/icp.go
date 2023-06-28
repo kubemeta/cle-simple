@@ -1,0 +1,3 @@
+package logconfig
+
+func CreateInterceptor() {}

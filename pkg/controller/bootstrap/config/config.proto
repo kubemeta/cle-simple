@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package bootstrap.config;
+
+option go_package = "kubemeta/cle-simple/pkg/controller/bootstrap/config;config";
+
+message Bootstrap {
+    Elasticsearch elasticsearch = 1;
+}
+
+message Elasticsearch {
+    bool enabled = 1;
+    repeated string address = 2;
+    string username = 3;
+    string password = 4;
+    bytes cACert= 5;
+    string aPIKey = 6;
+    string certificateFingerprint = 7;
+    string maxRetries = 8;
+    bool compressRequestBody = 9;
+    bool enableMetrics = 10;
+    bool enableDebugLogger = 11;
+}
